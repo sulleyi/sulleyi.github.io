@@ -2,7 +2,7 @@
 
 I've compiled some of my favorite resources on a variety of topics here.
 They have helped me a ton when trying to learn new topics and I still refer to them
-constantly. Hopefully you will find them helpful as well
+constantly. Hopefully you will find them helpful as well.
 
 ## Machine Learning
 
@@ -14,15 +14,32 @@ constantly. Hopefully you will find them helpful as well
   >I Liked using this in tandem with Andrew's course, it has great to-the-point
   descriptions of many of the most important basic concepts in ML
 
-- [MIT Introduction to MATLAB](https://ocw.mit.edu/courses/mathematics/18-s997-introduction-to-matlab-programming-fall-2011/index.htm)
-  > If you want to become great at using MATLAB, this is the course for you. It's a perfect supplement if you really want to understand
-  how to implement your ML algorithms
-
 - [fast.ai](https://www.fast.ai/)
   >Another great introductory ML course, with a more top down approach.
 
 
-## Misc
+## Computer Science
 
 - [Geeks for Geeks](https://www.geeksforgeeks.org/)
   >A great reference site for all things comp sci. My primary go-to when I need to see implementation examples.
+
+- [Martin Fowler's Site](https://martinfowler.com/)
+  >If you want to learn the tried and true techniques for writing beautiful, bug-free code, this is the site for you.
+
+- [Introduction to Theoretical Computer Science](https://introtcs.org/public/index.html)
+  >As the title implies this is all theory. A very comprehensive guide to the math and principles
+  that all of computational science is based on.
+
+- [MIT Introduction to MATLAB](https://ocw.mit.edu/courses/mathematics/18-s997-introduction-to matlab-programming-fall-2011/index.htm)
+  > If you want to become great at using MATLAB, this is the course for you.
+  It's a perfect supplement if you really want to understand how to implement your ML algorithms.
+
+## Mathematics
+
+- [MIT Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/)
+  >Incredibly informative course, Gilbert Strang is a wonderful instructor. A strong grasp of linear algebra is essential
+  if you want to really understand, analyze, and write your own ML algorithms.
+
+- [Introduction to Higher Mathematics](https://www.whitman.edu/mathematics/higher_math_online/)
+  >Another comprehensive guide if you want to really understand the core tenants of Mathematics.
+  The foundation of computing is built on computational mathematics and logic.
