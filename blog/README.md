@@ -4,7 +4,7 @@
 
 ## Welcome!
 
-I was inspired to start this site by my good friend [Miles Conn](www.milesconn.io).
+I was inspired to start this site by my good friend [Miles Conn](http://www.milesconn.io).
 Go check out his site for more musings on technology. Thanks for the help in getting
 this site set up.
 
