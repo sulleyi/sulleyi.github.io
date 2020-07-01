@@ -1,4 +1,6 @@
 #Resume / CV
 
+  [My Resume](./assets/resume.md)
 
-Ill be putting my experiences here!
+
+  I will be putting my experiences here!

@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Ian Sulley Blog',
+  title: 'Ian Sulley',
   description: 'This is a blog about experiences with technology',
   //theme: '@vuepress/blog', // OR shortcut: @vuepress/blog
   themeConfig: {
@@ -22,12 +22,20 @@ module.exports = {
         link: '/posts/',
       },
       {
+        text: 'Projects & Research',
+        link: '/projects-research/',
+      },
+      {
+        text: 'Resources',
+        link: '/resources/',
+      },
+      {
         text: 'About',
         link: '/about/',
       },
       {
         text: 'CV',
-        link: '/cv',
+        link: '/cv/',
       }
     ],
     /**
