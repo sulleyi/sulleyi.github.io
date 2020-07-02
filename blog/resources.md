@@ -26,6 +26,10 @@ constantly. Hopefully you will find them helpful as well.
 - [Martin Fowler's Site](https://martinfowler.com/)
   >If you want to learn the tried and true techniques for writing beautiful, bug-free code, this is the site for you.
 
+- [Guide to Git](https://mg.readthedocs.io/index.html)
+
+- [Guide to Computer Security](https://gist.github.com/nfarrar/b7fc7ded1858be854251)
+
 - [Introduction to Theoretical Computer Science](https://introtcs.org/public/index.html)
   >As the title implies this is all theory. A very comprehensive guide to the math and principles
   that all of computational science is based on.

@@ -1,6 +1,13 @@
-# About me
+# About Me
 
 
-My name is Ian Sulley and I am currently an undergraduate student at [Union College](union.edu).
+My name is Ian Sulley and I am currently an undergraduate student at [Union College](https://union.edu).
 I am majoring in computer engineering with minors in mathematics and data analytics. I spend most
 of my time learning interesting (albeit occasionally useless) things on the internet.
+
+
+## What I'm reading
+
+- [The Annotated Turing by Charles Petzold](http://theannotatedturing.com/)
+- [Efficient Scientific Writing: Write Better Papers, Faster by Oivind Andersson](https://www.amazon.com/gp/product/B07RR1DH1K/ref=dbs_a_def_rwt_bibl_vppi_i0)
+- [The Three-Body Problem by Cixin Liu](https://www.goodreads.com/book/show/20518872-the-three-body-problem)
