@@ -34,7 +34,7 @@ constantly. Hopefully you will find them helpful as well.
   >As the title implies this is all theory. A very comprehensive guide to the math and principles
   that all of computational science is based on.
 
-- [MIT Introduction to MATLAB](https://ocw.mit.edu/courses/mathematics/18-s997-introduction-to matlab-programming-fall-2011/index.htm)
+- [MIT Introduction to MATLAB](https://ocw.mit.edu/courses/mathematics/18-s997-introduction-to-matlab-programming-fall-2011/index.html)
   > If you want to become great at using MATLAB, this is the course for you.
   It's a perfect supplement if you really want to understand how to implement your ML algorithms.
 
@@ -42,7 +42,7 @@ constantly. Hopefully you will find them helpful as well.
 
 - [MIT Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/)
   >Incredibly informative course, Gilbert Strang is a wonderful instructor. A strong grasp of linear algebra is essential
-  if you want to really understand, analyze, and write your own ML algorithms.
+  if you want to understand, analyze, and write your own ML algorithms.
 
 - [Introduction to Higher Mathematics](https://www.whitman.edu/mathematics/higher_math_online/)
   >Another comprehensive guide if you want to really understand the core tenants of Mathematics.
