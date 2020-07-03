@@ -1,4 +1,4 @@
-#Resume / CV
+# Resume / CV
 
 
   - [My Resume](./assets/resume.md)
@@ -7,10 +7,12 @@
 
 Unfortunately I was locked out of my old Github account when my high school email address expired. You can still view it [here](https://github.com/isulley77?tab=repositories).
 
-##Supplemental course
+## Supplemental courses
 >These are online courses I have either fully or partially completed in addition to my college and high school coursework.
 
 - [Andrew Ng's Introduction to Machine Learning](https://www.coursera.org/learn/machine-learning)
+
+- [deeplearning.ai Neural Networks and Deep Learning Coursera course](https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome)
 
 - [MIT Introduction to MATLAB](https://ocw.mit.edu/courses/mathematics/18-s997-introduction-to-matlab-programming-fall-2011/index.htm)
 
