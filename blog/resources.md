@@ -34,7 +34,7 @@ constantly. Hopefully you will find them helpful as well.
   >As the title implies this is all theory. A very comprehensive guide to the math and principles
   that all of computational science is based on.
 
-- [MIT Introduction to MATLAB](https://ocw.mit.edu/courses/mathematics/18-s997-introduction-to-matlab-programming-fall-2011/index.html)
+- [MIT Introduction to MATLAB](https://ocw.mit.edu/courses/mathematics/18-s997-introduction-to-matlab-programming-fall-2011/index.htm)
   > If you want to become great at using MATLAB, this is the course for you.
   It's a perfect supplement if you really want to understand how to implement your ML algorithms.
 
