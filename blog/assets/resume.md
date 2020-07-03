@@ -12,7 +12,7 @@ Expected June 2023\
 GPA: 3.7
 
 **Stuyvesant High School** NYC, NY\
-_Diploma_ June 2019\
+_Stuyvesant Endorsed Advanced Regents Diploma_ June 2019\
 **Honors**\
 Physics Honors, National History Day Documentary Semifinalist, Regeneron Biology Participant
 
@@ -30,7 +30,7 @@ _Support Desk Personnel_ September 2019 – Present
 _Video Editor_ November 2016 – Present
 
 - Facilitated video post-production from the camera to web publication.
-- Established file management and archival system and data pipeline.
+- Established file management, archival system, and data pipeline.
 - Edited videos utilizing a variety of industry standard software.
 - Managed the posting of videos to public site.
 
@@ -38,8 +38,8 @@ _Video Editor_ November 2016 – Present
 _Production Assistant_ June 2017 – August 2019
 
 - Collaborated on website development and establishing a new equipment rental service.
-- Camera operator for live webcasts and standard video productions.
-- Assistant Director for live webcasts.
+- Camera operator and Assistant DP for live webcasts and standard video productions.
+- Implemented and managed SQL database of client projects and assets.
 - Completed post-production in a variety of mediums and software.
 - Organized equipment maintenance and transportation.
 ---------------------------------------------------------------------------------------
@@ -47,7 +47,7 @@ _Production Assistant_ June 2017 – August 2019
 **Union College ACM-W**\
 _Project Lead_ May 2019 - Present
 
-- Established initiative for collaboration on group projects to serve the Union College community.
+- Established initiative for collaboration on software projects to serve the Union College community.
 
 **Union College E.O.N.** Schenectady, NY\
 _Web Developer_ March 2019 – Present
