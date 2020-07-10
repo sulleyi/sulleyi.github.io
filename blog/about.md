@@ -6,8 +6,12 @@ I am majoring in computer engineering with minors in mathematics and data analyt
 of my time learning interesting (albeit occasionally useless) things on the internet.
 
 
-## What I'm reading
+## What I am reading
 
 - [The Annotated Turing by Charles Petzold](http://theannotatedturing.com/)
-- [Efficient Scientific Writing: Write Better Papers, Faster by Oivind Andersson](https://www.amazon.com/gp/product/B07RR1DH1K/ref=dbs_a_def_rwt_bibl_vppi_i0)
+- [tinyML](https://tinymlbook.com/)
 - [The Three-Body Problem by Cixin Liu](https://www.goodreads.com/book/show/20518872-the-three-body-problem)
+
+## What I have read
+
+- [Efficient Scientific Writing: Write Better Papers, Faster by Oivind Andersson](https://www.amazon.com/gp/product/B07RR1DH1K/ref=dbs_a_def_rwt_bibl_vppi_i0)

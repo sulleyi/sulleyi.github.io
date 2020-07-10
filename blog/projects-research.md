@@ -4,11 +4,9 @@
 
 ## My Current Research
 
-I am currently gather information on federated machine learning, adversarial neural networks, and computational security specifically regarding ML and AI algorithms.
-The ethical use of (ML & AI) software relies on the continuous development of secure systems that value robustness and user privacy. Federated Learning shows great promise
-as a starting point in solving these issues.
+I am currently gather information on tinyML, federated machine learning, general adversarial networks, and computational security specifically regarding ML and AI algorithms. The ethical use of (ML & AI) software relies on the continuous development of secure systems that value robustness and user privacy. Federated Learning shows great promise as a starting point in solving these issues.
 
-I am also interested in applying federated learning to build efficient, secure, and robust in-stream hydropower installations.
+
 
 
 ## My Current Projects
