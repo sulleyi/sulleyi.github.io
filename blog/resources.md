@@ -28,6 +28,10 @@ constantly. Hopefully you will find them helpful as well.
 
 - [Guide to Git](https://mg.readthedocs.io/index.html)
 
+- [Git Documentation](https://git-scm.com/book/en/v2)
+
+- [Git Branching](https://learngitbranching.js.org/)
+
 - [Guide to Computer Security](https://gist.github.com/nfarrar/b7fc7ded1858be854251)
 
 - [Introduction to Theoretical Computer Science](https://introtcs.org/public/index.html)
