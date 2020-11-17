@@ -1,7 +1,7 @@
 ---
 
 
-title: Artificial Intelligence: The Power Problem
+title: Artificial Intelligence - The Power Problem
 description: Why the current trend in power consumption is troubling and some potential solutions
 
 ---
