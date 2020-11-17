@@ -1,4 +1,15 @@
-Ian Sulley
+---
+
+
+title: Artificial Intelligence: The Power Problem
+description: Why the current trend in power consumption is troubling and some potential solutions
+
+---
+
+
+# {{ $frontmatter.title }}
+  >{{ $frontmatter.description }}
+
 
 
 We are currently being overwhelmed with data. While data storage and processing infrastructure lag behind data production, of the 7.5 septillion gigabytes being collected every day, over 55% is under-utilized or not utilized at all. The current power and data requirements of deep learning algorithms makes them ecologically and economically unviable for large scale training and deployment. When training a single AI model can emit as much carbon as five cars in their lifetimes, and the compute power required doubles every three and a half months,  it is clear our current progress is unsustainable. Drastically reducing the resource requirements of machine learning and artificial intelligence algorithms and the systems they run on is a pressing issue that must be solved in order to allow greater equity in the availability of this technology. In this paper, I will propose three technologies which, if adopted, can have significant energy saving benefits for artificial intelligence and machine learning technology.
