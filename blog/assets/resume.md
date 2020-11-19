@@ -6,8 +6,8 @@
 ## EDUCATION
 
 **Union College** Schenectady, NY\
-_Bachelor of Science in Computer Engineering_\
-_Minors in Mathematics, Data Analytics_\
+_Bachelor of Science in Computer Engineering & Mathematics_\
+_Scholars Program_
 Expected June 2023\
 GPA: 3.7
 
@@ -19,15 +19,23 @@ Physics Honors, National History Day Documentary Semifinalist, Regeneron Biology
 ------------------------------------------------------------------------------------
 ## EXPERIENCE
 
+**Convertsation** NYC, NY
+_Full Stack Engineering Intern_ August 2020 – Present
+
+-	Implemented automated frontend testing using Jest JavaScript testing framework.
+-	Collaborated with data science division to better integrate data and AI analysis throughout the platform.
+-	Developed full-stack production code in Vue.js and Go as platform gained hundreds of users.
+-	Integrated HubSpot API with platform, enabling the observation and analysis of thousands of user interactions.
+
 **Union College ITS Department** Schenectady, NY\
-_Support Desk Personnel_ September 2019 – Present
+_Support Desk Personnel_ September 2019 – June 2020
 
 - Provided support for staff, faculty and students for IT related issues.
 - Actively took on role in repairing and upgrading campus technology services.
 - Worked with call center and resolving service requests.
 
 **Kite and Rocket Research** NYC, NY\
-_Video Editor_ November 2016 – Present
+_Video Editor_ November 2016 – August 2020
 
 - Facilitated video post-production from the camera to web publication.
 - Established file management, archival system, and data pipeline.
@@ -62,7 +70,7 @@ _Volunteer_ December 2019 – Present
 **Junior State of America** NYC, NY\
 _Chapter President_ September 2017 – June 2019
 
-- Actively participated in and organized school events related to political participation, civil rights, and social justice.
+- Organized school events related to political participation, civil rights, and social justice.
 - Recruited club members, organized conference attendance and transportation, led instruction for new club members.
 
 **Stuyvesant A/V Club** NYC, NY\
@@ -72,5 +80,4 @@ _President_ September 2017 – June 2019
 ----------------------------------------------------------------------------------------------------------------------
 ## SKILLS
 
-**Computer:** Java, Python, Processing, MATLAB, JavaScript, Git, Linux, Vue.js, WordPress, HTML, CSS, Autodesk Inventor,
-Autodesk Fusion 360, AutoCAD, Adobe Creative Cloud, Microsoft Office Suite, Blackmagic DaVinci Resolve
+**Computer:** Java, Python, Processing, MATLAB, JavaScript, Git, Linux, Vue.js, WordPress, HTML, CSS
