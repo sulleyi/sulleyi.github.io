@@ -5,7 +5,7 @@
 ## My Current Research
 
 
-I am currently gather information on tinyML, federated machine learning, generative adversarial networks, and computational security specifically regarding ML and AI algorithms. The ethical use of (ML & AI) software relies on the continuous development of secure systems that value robustness and user privacy. Federated Learning shows great promise as a starting point in solving these issues.
+I am currently gather information on tinyML and computational security specifically regarding ML and AI algorithms. The ethical use of (ML & AI) software relies on the continuous development of secure systems that value robustness and user privacy. Federated Learning shows great promise as a starting point in solving these issues.
 
 
 
