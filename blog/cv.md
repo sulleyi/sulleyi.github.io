@@ -1,7 +1,7 @@
 # Resume / CV
 
 
-  - [My Resume](./assets/resume.md)
+  - [My Resume](./assets/IanSulleyResume_08_2021.pdf)
 
   - [My Github](https://github.com/sulleyi)
 
