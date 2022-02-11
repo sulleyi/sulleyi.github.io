@@ -1,7 +1,7 @@
 # Resume / CV
 
 
-  - [My Resume](blog/assets/IanSulleyResume_08_2021.pdf)
+  - [My Resume](https://drive.google.com/file/d/1HZiTO_HzvtjjFFB_YPvH5b4OzivahfG1/view?usp=sharing)
 
   - [My Github](https://github.com/sulleyi)
 
