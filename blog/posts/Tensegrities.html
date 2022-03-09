@@ -1,0 +1,667 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Union College Evolutionary Robotics Lab - Tensegrity Team</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f0347474-0f2a-4d03-b2d9-60c5fbe99750" class="page mono"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_3.png" style="object-position:center 60%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🧬</span></div><h1 class="page-title">Union College Evolutionary Robotics Lab - Tensegrity Team</h1></header><div class="page-body"><h2 id="b3f29fda-2e64-427c-a8ea-d8eaa53a828f" class=""><strong>Objectives</strong></h2><p id="a986e28c-6bf9-45dd-8211-cc6d33ceb1fa" class="">The Evolutionary Robotics Lab at Union College is trying to design complex robots that can adapt behavior to handle dynamic environments.</p><h2 id="03bfaf3b-63a1-45ec-84d6-ba75400e3239" class=""><strong>The Challenges of Controlling Soft Robots</strong></h2><div id="5fdc92ac-2451-4d06-b317-2306512e0222" class="column-list"><div id="d0049fda-66d0-4161-8cac-b5033acc0969" style="width:68.75%" class="column"><p id="34797a23-1fff-4047-b6b9-8564b84f1db8" class="">Soft Robotics is a particularly challenging area of interest. 
+<strong>Soft Robot</strong> = A robot built from soft flexible materials, often with many degrees of freedom. </p><p id="6a3089cb-f472-491b-857d-258b37a7b5ca" class="">The properties of Soft Robots make them especially challenging to model and control.</p></div><div id="7e658f6e-9fa8-47f5-8206-59d782d56efd" style="width:31.250000000000007%" class="column"><figure id="95759038-240c-4f1b-9513-80d4f64d6a35" class="image"><a href="Tensegrities/VValter.jpeg"><img style="width:474px" src="Tensegrities/VValter.jpeg"/></a><figcaption>An earlier version of VValter</figcaption></figure></div></div><h3 id="07c1f71c-52ef-4c96-95f3-84bb38dd3e60" class=""><strong>Tensegrities </strong><mark class="highlight-gray">[Tension - Integrity]</mark></h3><div id="2363b614-2938-49ee-8d12-d139068a01f2" class="column-list"><div id="1e686a0e-fa30-4ce9-b53e-139752f733a6" style="width:68.75%" class="column"><p id="e4a892d3-29c1-403a-853b-fb9278f534b3" class="">Tensegrities are defined by their topology, which is made up of an interconnected network of rigid struts and soft materials to apply tension between struts (ie. springs, cable, rope). The structure uses the force of tension within the soft materials to keep the structure stable.</p><p id="8307d055-e79e-44e7-848c-b0480c1b1450" class="">
+</p><p id="a5ef7f5e-52a9-4fd2-b0b3-aaace1003307" class="">Current research in the lab is interested in understanding how vibration forces (created by motors) can be used to control robot locomotion. If we can understand how the pre-conditions (initial motor speeds) map to our desired behavior (moving from Point A → Point B) we can successfully control our robot, and eventually use this to accomplish a more complex task. A secondary research goal is finding behaviors that are roost and adaptable, so that even if a robot experiences damage or encounters a new obstacle, it can successfully adapt its behavior to overcome new challenges.</p></div><div id="1703cf17-ee66-4e4c-9ff4-201df353d379" style="width:31.25%" class="column"><figure id="149d4799-73b0-47e4-ad71-720eb1eda5da" class="image"><a href="Tensegrities/tensegrity.gif"><img style="width:240px" src="Tensegrities/tensegrity.gif"/></a><figcaption>A tensegrity structure</figcaption></figure></div></div><h1 id="056d4cb1-d7ed-46fa-9aad-ad71d90c41e3" class=""><strong>Evolutionary Algorithms</strong></h1><p id="4c9422df-268e-4ea0-b776-2721e33c0b77" class="">
+</p><div id="9266771a-6b93-4bff-91d7-ed913cb390f4" class="column-list"><div id="0c070929-ec94-4c7f-897f-cb701d0f8583" style="width:31.25%" class="column"><h2 id="4cf6b817-1993-4bf3-a315-4aa913df5089" class=""><strong>Quality Diversity</strong></h2><p id="142ce4c6-f946-47bd-bf1d-0b774e297a1a" class="">The primary focus of the lab is in Quality Diversity Algorithms (QDA) for controlling soft robots.  QDA’s are state-space search algorithms that discover behavior in multiple niches of the possible behavior space. </p><h3 id="4a812b9e-f7b4-4597-bd12-17fc8c766dad" class="">Map Elites</h3></div><div id="74618e39-a55c-4686-b099-cdeb4470ce4c" style="width:68.75%" class="column"><figure id="0dc10154-e7e8-4d5b-8188-f372516a72e2"><div class="source"><a href="https://quality-diversity.github.io/">https://quality-diversity.github.io/</a></div><figcaption><strong>Note</strong>: To go back a page, right-click on the widget and select the arrow pointing left.</figcaption></figure></div></div><h2 id="20f15fea-0e8a-4dcb-9d77-50701870a3fe" class="">Research<strong> Tools</strong></h2><div id="060f61d6-64fb-49df-b087-da09cba3e0c9" class="column-list"><div id="a6f85ae8-4960-499b-b0f0-c9525fb6de43" style="width:31.25%" class="column"><h3 id="98692ba8-d2a1-4d5b-b8fe-abffe0432cf8" class="">DEAP</h3><p id="d1407bc7-7635-4f24-9aa8-bdca4136a551" class="">Framework for designing and running experiments with  Evolutionary Algorithms.</p><p id="3fc927e2-df2d-4719-8867-9e9c48e74a90" class="">
+</p><figure id="dac04332-c936-472e-bfe2-b00bb951c94d" class="link-to-page"><a href="https://www.notion.so/Tumor-Classification-w-DEAP-dac04332c936472ebfe2b00bb951c94d">Tumor Classification w/ DEAP </a></figure></div><div id="55c7f1a1-388d-40d1-8826-54e350aa9992" style="width:68.75%" class="column"><figure id="65e9e1b6-dff1-4891-8ede-96e55832a336"><div class="source"><a href="https://deap.readthedocs.io/en/master/">https://deap.readthedocs.io/en/master/</a></div></figure></div></div><p id="04a44541-56f5-41a2-8344-869cd51b6ba5" class="">
+</p><div id="c73b8d03-b54a-4415-8a0c-fc23a9fb4a74" class="column-list"><div id="e872f204-97c5-4974-a258-3a659ecadf14" style="width:31.25%" class="column"><h3 id="6b64a872-7a4d-4093-8e69-a4a399d3d4df" class="">qdpy</h3><p id="6f122bb8-e1ec-4094-a373-829c2e5f28d1" class="">Python implementation of common quality diversity algorithms, including Map Elites and CMA.</p><p id="037def23-03cd-4836-bb2f-4b064d5ac0f8" class="">
+</p></div><div id="8a2dad8c-1a44-4bd2-a36a-d45ecb3dcf53" style="width:68.75%" class="column"><figure id="d7328a48-8243-44e2-bbbc-47ea768b17af"><a href="https://gitlab.com/leo.cazenille/qdpy" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Leo Cazenille / qdpy</div><div class="bookmark-description">GitLab.com</div></div><div class="bookmark-href"><img src="https://gitlab.com/assets/favicon-7901bd695fb93edb07975966062049829afb56cf11511236e61bcf425070e36e.png" class="icon bookmark-icon"/>https://gitlab.com/leo.cazenille/qdpy</div></div><img src="https://gitlab.com/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png" class="bookmark-image"/></a></figure></div></div><p id="76b52125-dd57-4561-8b29-0c296c2d52f1" class="">
+</p><h2 id="7265eac2-8a97-4d75-8b0c-42a6ffad13ac" class=""><strong>Resources</strong></h2><div id="8858c537-7bf1-4935-8493-66e275aaeaac" class="column-list"><div id="1ec35749-58bb-42e7-9e70-05027c5077d8" style="width:31.25%" class="column"><h3 id="368d9be6-c3f9-4a72-a912-61c51a304e97" class="">Videos</h3><p id="ae6e8298-b62c-431e-b2d0-b136b0e7c5fb" class=""><a href="https://www.youtube.com/watch?v=hkzeE6BVNIk">NASA Superball v2 Tensegrity</a></p><p id="f9e7243d-752c-4b61-8a0c-f29443b60c4d" class=""><a href="https://www.youtube.com/watch?v=sqqOZ4Sg95Q">6 Bar Climbing Tensegrity</a></p><p id="91c937a1-ddd8-4c8b-bc86-d78007ca51be" class=""><a href="https://www.youtube.com/watch?v=8gtvxYZ0GIg">Build a Tensegrity</a></p><p id="ebe300b4-6835-4cee-ac9f-59828287fabd" class=""><a href="https://www.youtube.com/watch?v=SuLQDhrk9tQ">Union College Early Tensegrity</a></p><p id="6ab98d30-b06f-4bb1-bddb-9d6517115432" class=""><a href="https://www.youtube.c:wom/watch?v=TKANwv6u4SA">UC San Diego DucTT Tensegrity</a></p><p id="cabc1489-9714-4f18-ad6d-47fabf28a873" class=""><a href="https://www.youtube.com/watch?v=bb3sY0eauEs">Bio Inspire Tensgrities (ft. Floreano!!)</a></p><p id="fd61d38d-c5aa-4bb0-a4cf-adb3341567e5" class=""><a href="https://www.youtube.com/watch?v=bnlWtLcKwSY">Tensegrity Spine</a></p><p id="cc8d6c2b-10ef-44d0-ae57-89734166b126" class=""><a href="https://www.youtube.com/watch?v=ZRihg3G_4Uw">Berkley Tensegrity Lab</a></p><p id="8119d7d5-323f-4afb-99b0-c6f2247bbb1a" class=""><a href="https://www.youtube.com/watch?v=He2X_EiEjOo">12 Bar Rolling</a></p><p id="33b06176-f0cf-4ffe-9c7d-05e24652e8e1" class=""><a href="https://www.youtube.com/watch?v=lXWUPFmPY04">Tensegrity Rolling Simulation</a></p><p id="cacd2292-eaa2-4ab0-950f-6bf1e2bb3023" class=""><a href="https://www.youtube.com/watch?v=DR97pSEWa_w">Simulated Tensegrity Rolling</a></p><p id="3365ddd7-e3ea-4fb9-93bf-62cea6e0a55f" class=""><a href="https://www.youtube.com/watch?v=RZLKUJCy2EY">Tensegrity Towers</a></p><p id="ea3c843e-213e-45a4-a1b0-16db8812f093" class=""><a href="https://www.youtube.com/watch?v=abU6gjc9XkY">Tensegrity Towers</a></p></div><div id="b815cd5c-6f6d-4823-9121-68ad82245d6a" style="width:68.75%" class="column"><h3 id="dc73d95c-53b3-464e-803d-794ebfe75de2" class="">Papers</h3><figure id="f284e93c-939d-47a4-9454-ff600130d353"><div class="source"><a href="Tensegrities/Ian_Sulley_CSC483_Annotated_Bibliography_.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eb46e379-b133-4dc0-adb8-5fa33d3a29e1/Ian_Sulley_CSC483_Annotated_Bibliography_.pdf</a></div></figure><p id="63e02971-9092-49f8-bddd-8c7e5aad2bd1" class="">
+</p><p id="1d688303-0805-4c7b-8f6d-639b63106b43" class="">
+</p><p id="28272580-14e5-4c21-9c10-66b000f0021f" class="">
+</p></div></div></div></article></body></html>
