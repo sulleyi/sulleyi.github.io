@@ -69,6 +69,7 @@ chainWebpack: (config, isServer) => {
     .options({
       name: `[path][name].[ext]`
     });
+  
   config.module.rule('vue')
     .uses.store
     .get('vue-loader').store
@@ -79,11 +80,5 @@ chainWebpack: (config, isServer) => {
       image: ['xlink:href', 'href'],
       a: 'href'
     };
-  },
-  postcss: {
-    plugins: [
-      require("autoprefixer"),
-      require("tailwindcss")("./tailwind.config.js")
-    ]
   },
 }
