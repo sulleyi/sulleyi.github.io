@@ -10,7 +10,7 @@
   "repository": "https://github.com/sulleyi/sulleyi.github.io.git",
   "scripts": {
     "dev": "vuepress dev blog",
-    "build": "vuepress build docs"
+    "build": "vuepress build blog"
   },
   "license": "MIT",
   "devDependencies": {
