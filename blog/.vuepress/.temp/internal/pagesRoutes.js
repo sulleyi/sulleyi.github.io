@@ -1,0 +1,16 @@
+export const pagesRoutes = [
+  ["v-8daa1a0e","/",{"title":"The Co[de]-Lab"},["/index.html","/README.md"]],
+  ["v-22a39d25","/about.html",{"title":"About Me"},["/about","/about.md"]],
+  ["v-a9b911a6","/cv.html",{"title":"Resume / CV"},["/cv","/cv.md"]],
+  ["v-5c96f644","/projects-research.html",{"title":"My Projects & Research"},["/projects-research","/projects-research.md"]],
+  ["v-68dc5d0d","/resources.html",{"title":"Resources"},["/resources","/resources.md"]],
+  ["v-63d46498","/archived/HigherEducation.html",{"title":"How Do We Take Ego Out Of Higher Education?"},["/archived/HigherEducation","/archived/HigherEducation.md"]],
+  ["v-2bf50e99","/archived/VueJSDevelopment.html",{"title":"The Vue.js Framework"},["/archived/VueJSDevelopment","/archived/VueJSDevelopment.md"]],
+  ["v-05f8920e","/assets/resume.html",{"title":""},["/assets/resume","/assets/resume.md"]],
+  ["v-0c232ae2","/posts/AIPowerProblem.html",{"title":"Artificial Intelligence - The Power Problem"},["/posts/AIPowerProblem","/posts/AIPowerProblem.md"]],
+  ["v-6246c4a6","/posts/CitibikeSegmentation.html",{"title":"Customer Segmentation of Citibike Users"},["/posts/CitibikeSegmentation","/posts/CitibikeSegmentation.md"]],
+  ["v-528c8476","/posts/GuideToMachineLearning.html",{"title":"Machine Learning"},["/posts/GuideToMachineLearning","/posts/GuideToMachineLearning.md"]],
+  ["v-e1e3da16","/posts/",{"title":"The Posts"},["/posts/index.html","/posts/README.md"]],
+  ["v-286cb61a","/posts/SmartWaste.html",{"title":""},["/posts/SmartWaste","/posts/SmartWaste.md"]],
+  ["v-3706649a","/404.html",{"title":""},["/404"]],
+]
