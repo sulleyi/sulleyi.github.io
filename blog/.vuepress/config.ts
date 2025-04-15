@@ -22,6 +22,11 @@ export default defineUserConfig({
       }
     }
   }),
+   // Add favicon to head
+  head: [
+    // Basic favicon
+    ["link", { rel: "icon", href: "/iansulley_logo.ico" }],
+  ],
   // Theme config
   theme
 })
