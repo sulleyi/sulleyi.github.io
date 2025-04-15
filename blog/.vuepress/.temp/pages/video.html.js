@@ -1,5 +1,5 @@
-import comp from "/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/index.html.vue"
-const data = JSON.parse("{\"path\":\"/\",\"title\":\"Ian Sulley\",\"lang\":\"en-US\",\"frontmatter\":{},\"readingTime\":{\"minutes\":0.38,\"words\":115},\"filePathRelative\":\"README.md\"}")
+import comp from "/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/video.html.vue"
+const data = JSON.parse("{\"path\":\"/video.html\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{},\"readingTime\":{\"minutes\":0,\"words\":0},\"filePathRelative\":\"video.md\"}")
 export { comp, data }
 
 if (import.meta.webpackHot) {

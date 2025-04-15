@@ -1,0 +1,22 @@
+// Then add custom CSS in .vuepress/styles/index.scss
+:root {
+    --navbar-bg-color: #000000;
+    --navbar-text-color: #ffffff;
+  }
+  
+  .navbar {
+    background-color: var(--navbar-bg-color) !important;
+  }
+  
+  .navbar .site-name,
+  .navbar .nav-item,
+  .navbar .dropdown-title,
+  .navbar .dropdown-item {
+    color: var(--navbar-text-color) !important;
+  }
+  
+  // For navbar links and icons
+  .navbar .nav-links .nav-item .nav-link,
+  .navbar .repo-link .icon {
+    color: var(--navbar-text-color) !important;
+  }

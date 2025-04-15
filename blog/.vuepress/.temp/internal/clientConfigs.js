@@ -15,7 +15,7 @@ import * as clientConfig13 from '/Users/ecelt/Desktop/sulleyi.github.io/node_mod
 import * as clientConfig14 from '/Users/ecelt/Desktop/sulleyi.github.io/node_modules/@vuepress/plugin-nprogress/lib/client/config.js'
 import * as clientConfig15 from '/Users/ecelt/Desktop/sulleyi.github.io/node_modules/@vuepress/plugin-redirect/lib/client/config.js'
 import * as clientConfig16 from '/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/theme-hope/config.js'
-import * as clientConfig17 from '/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/client.js'
+import * as clientConfig17 from '/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/client.ts'
 
 export const clientConfigs = [
   clientConfig0,

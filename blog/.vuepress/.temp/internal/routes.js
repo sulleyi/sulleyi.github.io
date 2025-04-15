@@ -1,11 +1,11 @@
 export const redirects = JSON.parse("{}")
 
 export const routes = Object.fromEntries([
-  ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/index.html.js"), meta: {"title":"The Co[de]-Lab"} }],
+  ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/index.html.js"), meta: {"title":"Ian Sulley"} }],
   ["/about.html", { loader: () => import(/* webpackChunkName: "about.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/about.html.js"), meta: {"title":"About Me"} }],
-  ["/cv.html", { loader: () => import(/* webpackChunkName: "cv.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/cv.html.js"), meta: {"title":"Resume / CV"} }],
-  ["/projects-research.html", { loader: () => import(/* webpackChunkName: "projects-research.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/projects-research.html.js"), meta: {"title":"My Projects & Research"} }],
-  ["/resources.html", { loader: () => import(/* webpackChunkName: "resources.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/resources.html.js"), meta: {"title":"Resources"} }],
+  ["/music.html", { loader: () => import(/* webpackChunkName: "music.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/music.html.js"), meta: {"title":""} }],
+  ["/robotics.html", { loader: () => import(/* webpackChunkName: "robotics.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/robotics.html.js"), meta: {"title":""} }],
+  ["/video.html", { loader: () => import(/* webpackChunkName: "video.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/video.html.js"), meta: {"title":""} }],
   ["/posts/AIPowerProblem.html", { loader: () => import(/* webpackChunkName: "posts_AIPowerProblem.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/posts/AIPowerProblem.html.js"), meta: {"title":"Artificial Intelligence - The Power Problem"} }],
   ["/posts/CitibikeSegmentation.html", { loader: () => import(/* webpackChunkName: "posts_CitibikeSegmentation.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/posts/CitibikeSegmentation.html.js"), meta: {"title":"Customer Segmentation of Citibike Users"} }],
   ["/posts/GuideToMachineLearning.html", { loader: () => import(/* webpackChunkName: "posts_GuideToMachineLearning.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/posts/GuideToMachineLearning.html.js"), meta: {"title":"Machine Learning"} }],

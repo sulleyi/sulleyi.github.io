@@ -6,12 +6,22 @@ import { defineUserConfig } from 'vuepress'
 
 export default defineUserConfig({
   // Basic site config
-  title: 'Your Site Title',
-  description: 'Your site description',
+  title: 'Ian Sulley',
+  description: 'Live Video',
   
-  bundler: viteBundler(),
-
+  // ... your other config
+  bundler: viteBundler({
+    viteOptions: {
+      optimizeDeps: {
+        include: ['three'],
+      },
+      build: {
+        commonjsOptions: {
+          ignoreTryCatch: false
+        }
+      }
+    }
+  }),
   // Theme config
-  theme,
-  
+  theme
 })

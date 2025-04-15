@@ -1,43 +1,73 @@
 {
-  "hash": "6d166da4",
-  "configHash": "703de267",
-  "lockfileHash": "f39dce6f",
-  "browserHash": "8d9f1cad",
+  "hash": "e94eef32",
+  "configHash": "3668bc56",
+  "lockfileHash": "76bc5a3a",
+  "browserHash": "700c4aea",
   "optimized": {
+    "three": {
+      "src": "../../../../node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "fb39a534",
+      "needsInterop": false
+    },
     "@vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "5b3834d9",
+      "fileHash": "42da4480",
       "needsInterop": false
     },
     "@vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "@vue_devtools-api.js",
-      "fileHash": "2ce4ad97",
+      "fileHash": "add33de6",
       "needsInterop": false
     },
     "@vuepress/shared": {
       "src": "../../../../node_modules/@vuepress/shared/dist/index.js",
       "file": "@vuepress_shared.js",
-      "fileHash": "d720f4aa",
+      "fileHash": "16375665",
       "needsInterop": false
     },
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "5f17b276",
+      "fileHash": "da33889d",
       "needsInterop": false
     },
     "vue-router": {
       "src": "../../../../node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "file": "vue-router.js",
-      "fileHash": "2afc9390",
+      "fileHash": "6b7b25e0",
+      "needsInterop": false
+    },
+    "@tresjs/core": {
+      "src": "../../../../node_modules/@tresjs/core/dist/tres.js",
+      "file": "@tresjs_core.js",
+      "fileHash": "06f10cff",
+      "needsInterop": false
+    },
+    "three/examples/jsm/loaders/FontLoader.js": {
+      "src": "../../../../node_modules/three/examples/jsm/loaders/FontLoader.js",
+      "file": "three_examples_jsm_loaders_FontLoader__js.js",
+      "fileHash": "ae57f2a1",
+      "needsInterop": false
+    },
+    "three/examples/jsm/geometries/TextGeometry.js": {
+      "src": "../../../../node_modules/three/examples/jsm/geometries/TextGeometry.js",
+      "file": "three_examples_jsm_geometries_TextGeometry__js.js",
+      "fileHash": "47d6f1a0",
       "needsInterop": false
     }
   },
   "chunks": {
+    "chunk-BTMJE3UT": {
+      "file": "chunk-BTMJE3UT.js"
+    },
     "chunk-LW4I4DCF": {
       "file": "chunk-LW4I4DCF.js"
+    },
+    "chunk-PZ5AY32C": {
+      "file": "chunk-PZ5AY32C.js"
     }
   }
 }

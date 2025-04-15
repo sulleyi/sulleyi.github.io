@@ -1,1 +1,1 @@
-export const sidebarData = {"/":["","about","projects-research","resources","cv",{"text":"The Posts","prefix":"posts/","collapsible":true,"children":["","SmartWaste","AIPowerProblem","CitibikeSegmentation","GuideToMachineLearning"]}]};
+export const sidebarData = {};
