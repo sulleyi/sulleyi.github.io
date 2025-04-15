@@ -1,7 +1,7 @@
 <template><div><div class="responsive-center">
 <a href="about">
   <ClientOnly>
-    <VideotapeMonogram :width="600" :height="400" :debug="false" />
+    <SoundMonogram :width="600" :height="400" :debug="false" />
 </ClientOnly>
 </a>
 </div></div></template>

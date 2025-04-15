@@ -6,7 +6,7 @@ import { defineUserConfig } from 'vuepress'
 
 export default defineUserConfig({
   // Basic site config
-  title: 'robots, microphones, & videotape.',
+  title: 'robots, sound, & videotape.',
   description: 'ian francis sulley',
   
   // ... your other config

@@ -1,4 +1,4 @@
-<template><div><p>A blog to chronicle experiences in music, art &amp; technology.</p>
+<template><div><p>A blog to chronicle experiences in music, art, &amp; technology.</p>
 <h2 id="welcome" tabindex="-1"><a class="header-anchor" href="#welcome"><span>Welcome!</span></a></h2>
 <p>I was inspired to start this site by my good friend <a href="http://milesconn.io" target="_blank" rel="noopener noreferrer">Miles Conn</a>.
 Go check out his site for more musings on technology. Thanks for the help in getting

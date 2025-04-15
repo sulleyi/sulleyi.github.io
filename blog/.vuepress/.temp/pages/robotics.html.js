@@ -1,5 +1,5 @@
 import comp from "/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/robotics.html.vue"
-const data = JSON.parse("{\"path\":\"/robotics.html\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{},\"readingTime\":{\"minutes\":0,\"words\":0},\"filePathRelative\":\"robotics.md\"}")
+const data = JSON.parse("{\"path\":\"/robotics.html\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{},\"readingTime\":{\"minutes\":0.06,\"words\":19},\"filePathRelative\":\"robotics.md\"}")
 export { comp, data }
 
 if (import.meta.webpackHot) {

@@ -28,8 +28,8 @@ export default hopeTheme
       link: "robotics",
     },
     {
-      text: "music",
-      link: "music",
+      text: "sound",
+      link: "sound",
     },
     {
       text: "about",

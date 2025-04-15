@@ -1,4 +1,4 @@
-export const siteData = JSON.parse("{\"base\":\"/\",\"lang\":\"en-US\",\"title\":\"robots, microphones, & videotape.\",\"description\":\"ian francis sulley\",\"head\":[[\"link\",{\"rel\":\"icon\",\"href\":\"/iansulley_logo.ico\"}]],\"locales\":{}}")
+export const siteData = JSON.parse("{\"base\":\"/\",\"lang\":\"en-US\",\"title\":\"robots, sound, & videotape.\",\"description\":\"ian francis sulley\",\"head\":[[\"link\",{\"rel\":\"icon\",\"href\":\"/iansulley_logo.ico\"}]],\"locales\":{}}")
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()

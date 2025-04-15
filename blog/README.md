@@ -2,12 +2,12 @@
 home: true
 heroImage: '/iansulley_logo.png'
 heroText: 'ian francis sulley'
-tagline: 'Robots, Microphones, & Videotape.'
+tagline: 'robots, sound, & videotape.'
 navbar: false
 sidebar: true
 ---
 
-A blog to chronicle experiences in music, art & technology.
+A blog to chronicle experiences in music, art, & technology.
 
 ## Welcome!
 
