@@ -4,6 +4,10 @@
     <SoundMonogram :width="600" :height="400" :debug="false" />
 </ClientOnly>
 </a>
-</div></div></template>
+</div>
+<VidStack
+  src="/Somethingscosmicv2_1.mp3"
+  title="live @ hi-note"
+/></div></template>
 
 

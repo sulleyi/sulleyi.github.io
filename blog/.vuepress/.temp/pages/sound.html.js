@@ -1,5 +1,5 @@
 import comp from "/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/sound.html.vue"
-const data = JSON.parse("{\"path\":\"/sound.html\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{},\"readingTime\":{\"minutes\":0.06,\"words\":19},\"filePathRelative\":\"sound.md\"}")
+const data = JSON.parse("{\"path\":\"/sound.html\",\"title\":\"\",\"lang\":\"en-US\",\"frontmatter\":{},\"readingTime\":{\"minutes\":0.09,\"words\":28},\"filePathRelative\":\"sound.md\"}")
 export { comp, data }
 
 if (import.meta.webpackHot) {

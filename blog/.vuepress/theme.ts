@@ -10,6 +10,12 @@ export default hopeTheme
     icon: {
       assets: "iconify",
     },
+    components: {
+      components: [
+        "VidStack",
+        "Share",
+      ]
+    }
   },
 
   contributors: false,

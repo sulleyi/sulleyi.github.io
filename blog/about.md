@@ -3,7 +3,6 @@
 
 Hi, my name is Ian. This is my site.
 
-
 <div class="responsive-center">
 <a href="about">
   <ClientOnly>

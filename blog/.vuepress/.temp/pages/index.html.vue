@@ -5,8 +5,9 @@ Go check out his site for more musings on technology. Thanks for the help in get
 this site set up.</p>
 <p>I'm just getting started so there isn't much to see here yet. Come back later for some cool content!</p>
 <p>If you care to see what I'm currently working on, check out my <a href="https://github.com/sulleyi" target="_blank" rel="noopener noreferrer">Github</a>.</p>
-<p>Anyways, I hope you enjoy this site. Go learn something <strong>new</strong>!</p>
-<h3 id="click-the-spinning-emblem-to-enter-hardhats-required" tabindex="-1"><a class="header-anchor" href="#click-the-spinning-emblem-to-enter-hardhats-required"><span>click the spinning emblem to enter... <em>hardhats Required</em></span></a></h3>
+<p>Anyways, I hope you enjoy this site.</p>
+<h3 id="click-the-spinning-emblem-to-enter" tabindex="-1"><a class="header-anchor" href="#click-the-spinning-emblem-to-enter"><span>click the spinning emblem to enter...</span></a></h3>
+<p><em>hardhats required</em></p>
 <div class="responsive-center">
 <a href="about">
   <ClientOnly>
@@ -14,6 +15,6 @@ this site set up.</p>
 </ClientOnly>
 </a>
 </div>
-</div></template>
+<Share colorful /></div></template>
 
 

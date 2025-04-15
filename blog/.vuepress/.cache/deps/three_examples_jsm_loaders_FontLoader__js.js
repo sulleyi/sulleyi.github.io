@@ -2,8 +2,7 @@ import {
   FileLoader,
   Loader,
   ShapePath
-} from "./chunk-BTMJE3UT.js";
-import "./chunk-PZ5AY32C.js";
+} from "./chunk-FCCY7NZC.js";
 
 // node_modules/three/examples/jsm/loaders/FontLoader.js
 var FontLoader = class extends Loader {

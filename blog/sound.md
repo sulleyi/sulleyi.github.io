@@ -5,3 +5,8 @@
 </ClientOnly>
 </a>
 </div>
+
+<VidStack
+  src="/Somethingscosmicv2.mp3"
+  title="live @ hi-note"
+/>

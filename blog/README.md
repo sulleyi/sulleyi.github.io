@@ -19,9 +19,10 @@ I'm just getting started so there isn't much to see here yet. Come back later fo
 
 If you care to see what I'm currently working on, check out my [Github](https://github.com/sulleyi).
 
-Anyways, I hope you enjoy this site. Go learn something **new**!
+Anyways, I hope you enjoy this site.
 
-### click the spinning emblem to enter... *hardhats Required*
+### click the spinning emblem to enter... 
+*hardhats required*
 
 <div class="responsive-center">
 <a href="about">
@@ -31,3 +32,5 @@ Anyways, I hope you enjoy this site. Go learn something **new**!
 </a>
 </div>
 
+
+<Share colorful />
