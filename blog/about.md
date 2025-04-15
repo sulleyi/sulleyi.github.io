@@ -1,7 +1,6 @@
 
 # About Me
-My name is Ian Sulley and I work in the entertainment production space.
 
-my cool donut
+Hi, my name is Ian Sulley and I exist in the live events and video production space.
 
 

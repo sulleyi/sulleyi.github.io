@@ -20,3 +20,86 @@
   .navbar .repo-link .icon {
     color: var(--navbar-text-color) !important;
   }
+
+
+  .center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+
+
+  // Add this to your .vuepress/styles/index.scss
+
+// Responsive center container
+.responsive-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2rem auto;
+    
+    /* Make sure content doesn't overflow its container */
+    max-width: 100%;
+    overflow: visible;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    
+    /* Add responsive padding */
+    padding: 0 1rem;
+    
+    /* Ensure minimum height so it's always visible */
+    min-height: 50px;
+  }
+  
+  /* Make children responsive too */
+  .responsive-center > * {
+    max-width: 100%;
+    /* Optional: add some transition for smooth resizing */
+    transition: all 0.3s ease;
+  }
+  
+  /* For extra large elements that might need special handling */
+  .responsive-center.for-large-content {
+    /* Handle overflowing content */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    /* For tables, charts, or other wide content */
+    display: block;  /* Override flex for certain elements if needed */
+    text-align: center;
+  }
+  
+  /* Additional media queries for fine-tuning behavior at different breakpoints */
+  @media (max-width: 768px) {
+    .responsive-center {
+      /* Adjust spacing on smaller screens */
+      margin: 1.5rem auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .responsive-center {
+      /* Further adjustments for mobile */
+      margin: 1rem auto;
+    }
+  }
+  
+  /* For absolute position fallback (use when all else fails) */
+  .fullscreen-center {
+    position: relative;
+    width: 100%; 
+    height: 50vh; /* Adjust height as needed */
+  }
+  
+  .fullscreen-center > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%; /* Prevent overflowing the viewport */
+    max-height: 90%;
+  }
+  

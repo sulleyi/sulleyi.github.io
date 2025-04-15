@@ -1,15 +1,13 @@
 <template>
-  <div class="three-container" ref="container" :style="{ width: `${width}px`, height: `${height}px` }"></div>
+  <div class="three-container" ref="container"></div>
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
 import * as THREE from 'three'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
-// ShapeGeometry is available directly from THREE
-// No need for separate import
 
-// Props with explicit dimensions
+// Props with explicit dimensions and responsive mode option
 const props = defineProps({
   width: {
     type: Number,
@@ -18,6 +16,10 @@ const props = defineProps({
   height: {
     type: Number,
     default: 600
+  },
+  responsive: {
+    type: Boolean,
+    default: true
   }
 })
 
@@ -27,7 +29,11 @@ const renderer = ref(null)
 
 // Three.js variables
 let scene, camera, monogram
+let pixelEffect = null
 let animationId = null
+let sceneInitialized = false
+let containerWidth = props.width
+let containerHeight = props.height
 
 // Create the flat pixelated IS monogram using shapes instead of extruded text
 const createFlatMonogram = (font) => {
@@ -94,11 +100,13 @@ const createFlatMonogram = (font) => {
 }
 
 // Add pixelation effect to renderer
-const createPixelEffect = () => {
+const createPixelEffect = (width, height) => {
   // Pixelate by rendering to a lower resolution texture first
   const pixelSize = 6; // Size of each "pixel"
-  const rtWidth = Math.floor(props.width / pixelSize);
-  const rtHeight = Math.floor(props.height / pixelSize);
+  const rtWidth = Math.floor(width / pixelSize);
+  const rtHeight = Math.floor(height / pixelSize);
+  
+  console.log(`Creating pixel effect with dimensions: ${rtWidth}x${rtHeight}`);
   
   // Create low-resolution render target with nearest-neighbor filtering
   const renderTarget = new THREE.WebGLRenderTarget(rtWidth, rtHeight, {
@@ -124,6 +132,8 @@ const createPixelEffect = () => {
     orthoCamera,
     postScene,
     render: (renderer, mainScene, mainCamera) => {
+      if (!renderer || !mainScene || !mainCamera) return;
+      
       // First render the scene to low-res target
       renderer.setRenderTarget(renderTarget);
       renderer.clear();
@@ -133,6 +143,21 @@ const createPixelEffect = () => {
       renderer.setRenderTarget(null);
       renderer.clear();
       renderer.render(postScene, orthoCamera);
+    },
+    // Add a resize method to handle dimension changes
+    resize: (width, height) => {
+      const newRtWidth = Math.floor(width / pixelSize);
+      const newRtHeight = Math.floor(height / pixelSize);
+      
+      console.log(`Resizing pixel effect to: ${newRtWidth}x${newRtHeight}`);
+      
+      renderTarget.setSize(newRtWidth, newRtHeight);
+    },
+    // Add a dispose method to clean up resources
+    dispose: () => {
+      renderTarget.dispose();
+      postMaterial.dispose();
+      postGeometry.dispose();
     }
   };
 }
@@ -149,6 +174,25 @@ const initThree = async () => {
     return;
   }
   
+  // Get container dimensions
+  if (props.responsive) {
+    containerWidth = container.value.clientWidth || props.width;
+    containerHeight = container.value.clientHeight || props.height;
+    
+    // Set container style for responsive mode
+    container.value.style.width = '100%';
+    container.value.style.height = '100%';
+  } else {
+    containerWidth = props.width;
+    containerHeight = props.height;
+    
+    // Set explicit dimensions
+    container.value.style.width = `${containerWidth}px`;
+    container.value.style.height = `${containerHeight}px`;
+  }
+  
+  console.log(`Container dimensions: ${containerWidth}x${containerHeight}`);
+  
   // Create scene with transparent background
   scene = new THREE.Scene();
   // No background color set = transparent
@@ -156,18 +200,18 @@ const initThree = async () => {
   // Set up camera with proper aspect ratio
   camera = new THREE.PerspectiveCamera(
     65, // Wider field of view to accommodate larger monogram
-    props.width / props.height, 
+    containerWidth / containerHeight, 
     0.1, 
     1000
   );
   camera.position.z = 8; // Moved camera back to fit larger monogram
   
-  // Initialize renderer with explicit dimensions and transparency
+  // Initialize renderer with container dimensions and transparency
   renderer.value = new THREE.WebGLRenderer({ 
     antialias: false, // Disable antialiasing for more pixelated look
     alpha: true // Enable transparency
   });
-  renderer.value.setSize(props.width, props.height);
+  renderer.value.setSize(containerWidth, containerHeight);
   renderer.value.setPixelRatio(window.devicePixelRatio);
   
   // Clear container if needed
@@ -179,7 +223,7 @@ const initThree = async () => {
   container.value.appendChild(renderer.value.domElement);
   
   // Create pixel effect
-  const pixelEffect = createPixelEffect();
+  pixelEffect = createPixelEffect(containerWidth, containerHeight);
   
   // Load font and create monogram
   const fontLoader = new FontLoader();
@@ -209,27 +253,8 @@ const initThree = async () => {
     const ambientLight = new THREE.AmbientLight(0xFFFFFF, 1);
     scene.add(ambientLight);
     
-    // Update animation function to use pixel effect
-    animate = () => {
-      animationId = requestAnimationFrame(animate);
-      
-      if (monogram) {
-        // Spin the monogram
-        monogram.rotation.y += 0.01;
-        
-        // Slight wobble
-        monogram.rotation.x = Math.sin(Date.now() * 0.001) * 0.2;
-        
-        // Make sure flat objects don't completely disappear edge-on
-        if (Math.abs(Math.sin(monogram.rotation.y)) < 0.1) {
-          monogram.rotation.y += 0.02;
-        }
-      }
-      
-      if (renderer.value && scene && camera) {
-        pixelEffect.render(renderer.value, scene, camera);
-      }
-    };
+    // Mark as initialized
+    sceneInitialized = true;
     
     console.log('Three.js scene with flat pixelated IS monogram initialized');
   } catch (error) {
@@ -237,70 +262,137 @@ const initThree = async () => {
   }
 }
 
-// Animation loop (placeholder, will be replaced during initialization)
-let animate = () => {
+// Animation loop
+const animate = () => {
   animationId = requestAnimationFrame(animate);
   
-  if (monogram && renderer.value && scene && camera) {
+  if (monogram) {
+    // Spin the monogram
     monogram.rotation.y += 0.01;
-    renderer.value.render(scene, camera);
+    
+    // Slight wobble
+    monogram.rotation.x = Math.sin(Date.now() * 0.001) * 0.2;
+    
+    // Make sure flat objects don't completely disappear edge-on
+    if (Math.abs(Math.sin(monogram.rotation.y)) < 0.1) {
+      monogram.rotation.y += 0.02;
+    }
+  }
+  
+  if (renderer.value && scene && camera && pixelEffect) {
+    pixelEffect.render(renderer.value, scene, camera);
   }
 };
 
-// Handle resize
-const handleResize = async () => {
-  if (!camera || !renderer.value) return;
+// Handle resize - improved to be more efficient
+const handleResize = () => {
+  if (!camera || !renderer.value || !container.value || !pixelEffect) return;
   
-  await nextTick();
-  
-  camera.aspect = props.width / props.height;
-  camera.updateProjectionMatrix();
-  renderer.value.setSize(props.width, props.height);
-  
-  // Re-init pixel effect on resize
-  if (typeof initThree === 'function') {
-    cancelAnimationFrame(animationId);
-    await initThree();
+  // Get new dimensions
+  if (props.responsive) {
+    containerWidth = container.value.clientWidth || props.width;
+    containerHeight = container.value.clientHeight || props.height;
+  } else {
+    containerWidth = props.width;
+    containerHeight = props.height;
+    
+    // Update explicit dimensions
+    container.value.style.width = `${containerWidth}px`;
+    container.value.style.height = `${containerHeight}px`;
   }
+  
+  console.log(`Resizing to: ${containerWidth}x${containerHeight}`);
+  
+  // Update camera
+  camera.aspect = containerWidth / containerHeight;
+  camera.updateProjectionMatrix();
+  
+  // Update renderer
+  renderer.value.setSize(containerWidth, containerHeight);
+  
+  // Update pixel effect
+  pixelEffect.resize(containerWidth, containerHeight);
 };
 
 // Watch for prop changes
-watch(() => props.width, handleResize);
-watch(() => props.height, handleResize);
+watch(() => props.width, (newWidth) => {
+  if (!props.responsive) handleResize();
+});
 
-// Lifecycle hooks with explicit timeout to ensure DOM is ready
-onMounted(() => {
+watch(() => props.height, (newHeight) => {
+  if (!props.responsive) handleResize();
+});
+
+// Create a debounced resize handler to improve performance
+const debounce = (func, wait) => {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+};
+
+const debouncedResize = debounce(handleResize, 100);
+
+// Lifecycle hooks
+onMounted(async () => {
   console.log('Component mounted');
-  // Use a short timeout to ensure the DOM is fully ready
-  setTimeout(async () => {
-    if (typeof window !== 'undefined') {
-      try {
-        await initThree();
-        animate();
-        window.addEventListener('resize', handleResize);
-      } catch (error) {
-        console.error('Error initializing Three.js:', error);
-      }
-    }
-  }, 100);
+  
+  // Initialize the scene
+  await initThree();
+  
+  // Start animation loop
+  animate();
+  
+  // Add window resize listener for responsive mode
+  if (props.responsive) {
+    window.addEventListener('resize', debouncedResize);
+  }
+  
+  // Force an initial resize to ensure everything is sized correctly
+  handleResize();
 });
 
 onBeforeUnmount(() => {
   console.log('Component unmounting');
-  // Clean up resources
+  
+  // Clean up animation
   if (animationId) {
     cancelAnimationFrame(animationId);
+    animationId = null;
   }
   
+  // Clean up pixel effect
+  if (pixelEffect) {
+    pixelEffect.dispose();
+    pixelEffect = null;
+  }
+  
+  // Clean up renderer
   if (renderer.value) {
     renderer.value.dispose();
     
     if (renderer.value.domElement && renderer.value.domElement.parentNode) {
       renderer.value.domElement.parentNode.removeChild(renderer.value.domElement);
     }
+    
+    renderer.value = null;
   }
   
-  window.removeEventListener('resize', handleResize);
+  // Remove resize listener
+  if (props.responsive) {
+    window.removeEventListener('resize', debouncedResize);
+  }
+  
+  // Clear scene references
+  scene = null;
+  camera = null;
+  monogram = null;
+  sceneInitialized = false;
 });
 </script>
 
@@ -309,5 +401,11 @@ onBeforeUnmount(() => {
   position: relative;
   overflow: hidden;
   background: transparent;
+  width: 100%;
+  height: 100%;
+  /* Add display flex for better centering in parent containers */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
