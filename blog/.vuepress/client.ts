@@ -4,6 +4,7 @@ import ThreeScene from './components/ThreeScene.vue';
 import RobotsMonogram from './components/RobotsMonogram.vue'
 import SoundMonogram from './components/SoundMonogram.vue'
 import VideotapeMonogram from './components/VideotapeMonogram.vue'
+import IsWasMonogram from './components/IsWasMonogram.vue'
 
 
 export default defineClientConfig({
@@ -14,5 +15,6 @@ export default defineClientConfig({
     app.component("RobotsMonogram", RobotsMonogram);
     app.component("SoundMonogram", SoundMonogram);
     app.component("VideotapeMonogram", VideotapeMonogram);
+    app.component("IsWasMonogram", IsWasMonogram);
     }
 })

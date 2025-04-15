@@ -12,27 +12,25 @@ export default hopeTheme
     },
   },
 
+  contributors: false,
+
   logo: '/iansulley_logo.png',
 
   sidebar: [
     {
-      text: "home",
-      link: "/",
-    },
-    {
-      text: "video",
-      link: "video",
-    },
-    {
-      text: "robotics",
+      text: "robots,",
       link: "robotics",
     },
     {
-      text: "sound",
+      text: "sound,",
       link: "sound",
     },
     {
-      text: "about",
+      text: "& videotape.",
+      link: "video",
+    },
+    {
+      text: "about me",
       link: "about",
     },
   ],
