@@ -6,8 +6,8 @@ import { defineUserConfig } from 'vuepress'
 
 export default defineUserConfig({
   // Basic site config
-  title: 'Ian Sulley',
-  description: 'Live Video',
+  title: 'robots, microphones, & videotape.',
+  description: 'ian francis sulley',
   
   // ... your other config
   bundler: viteBundler({

@@ -2,7 +2,7 @@
 home: true
 heroImage: '/iansulley_logo.png'
 heroText: 'ian francis sulley'
-tagline: 'Robots, Microphones, & Videotape'
+tagline: 'Robots, Microphones, & Videotape.'
 navbar: false
 sidebar: true
 ---
