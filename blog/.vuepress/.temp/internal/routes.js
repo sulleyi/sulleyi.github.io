@@ -2,7 +2,7 @@ export const redirects = JSON.parse("{}")
 
 export const routes = Object.fromEntries([
   ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/index.html.js"), meta: {"title":""} }],
-  ["/about.html", { loader: () => import(/* webpackChunkName: "about.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/about.html.js"), meta: {"title":"About Me"} }],
+  ["/about.html", { loader: () => import(/* webpackChunkName: "about.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/about.html.js"), meta: {"title":""} }],
   ["/robotics.html", { loader: () => import(/* webpackChunkName: "robotics.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/robotics.html.js"), meta: {"title":""} }],
   ["/sound.html", { loader: () => import(/* webpackChunkName: "sound.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/sound.html.js"), meta: {"title":""} }],
   ["/video.html", { loader: () => import(/* webpackChunkName: "video.html" */"/Users/ecelt/Desktop/sulleyi.github.io/blog/.vuepress/.temp/pages/video.html.js"), meta: {"title":""} }],

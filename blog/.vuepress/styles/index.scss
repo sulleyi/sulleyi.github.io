@@ -103,3 +103,126 @@
     max-height: 90%;
   }
   
+
+  // Override Hope theme's reading progress bar with VHS tape styling
+
+// Target the Hope theme's reading progress bar container
+.reading-bar-container {
+  // Base container styling
+  background-color: #111 !important;
+  border: 1px solid #333 !important;
+  border-radius: 3px !important;
+  padding: 0.8rem !important;
+  height: auto !important; // Override height to accommodate our custom design
+  max-height: none !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.5rem !important;
+  
+  // Add VHS label text
+  &::before {
+    content: "READING";
+    color: #888;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  
+  // Style the actual progress bar
+  .reading-bar {
+    height: 10px !important;
+    background-color: #222 !important;
+    border-radius: 5px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    width: 100% !important;
+    
+    // The actual progress indicator
+    &::before {
+      background: linear-gradient(90deg, #444 0%, #666 50%, #444 100%) !important;
+      background-size: 10px 10px !important;
+      transition: width 0.1s ease-out !important;
+      
+      // VHS tape lines effect
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 2px,
+          rgba(255, 255, 255, 0.1) 2px,
+          rgba(255, 255, 255, 0.1) 4px
+        );
+        animation: loading 1s linear infinite;
+      }
+    }
+  }
+  
+  // Add percentage counter
+  &::after {
+    content: attr(data-progress) "%";
+    text-align: right;
+    color: #666;
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    font-family: 'Courier New', monospace;
+    display: block;
+  }
+}
+
+// Optional animation for loading effect
+@keyframes loading {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 40px 0px;
+  }
+}
+
+// Add time estimate as a VHS counter-style display
+.reading-time-info {
+  font-family: 'VCR OSD Mono', 'Courier New', monospace !important;
+  color: #666 !important;
+  background-color: #222 !important;
+  padding: 2px 5px !important;
+  border-radius: 3px !important;
+  font-size: 0.8rem !important;
+  display: inline-block !important;
+  margin-left: auto !important;
+  border: 1px solid #444 !important;
+  
+  // Style for the reading time number specifically
+  .reading-time {
+    color: #999 !important;
+  }
+}
+
+// If you want to make the progress bar stay at the top of the page
+.reading-bar-container.fixed {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  border-radius: 0 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  z-index: 100 !important;
+}
+
+// Add additional space if using fixed positioning
+body {
+  &.has-reading-bar {
+    padding-top: 3.5rem !important;
+  }
+}

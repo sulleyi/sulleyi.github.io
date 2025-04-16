@@ -2,18 +2,18 @@
   "hash": "c83a9d69",
   "configHash": "3668bc56",
   "lockfileHash": "4afb09e7",
-  "browserHash": "88ef53fa",
+  "browserHash": "2284f467",
   "optimized": {
     "three": {
       "src": "../../../../node_modules/three/build/three.module.js",
       "file": "three.js",
-      "fileHash": "c0e6069e",
+      "fileHash": "e2049060",
       "needsInterop": false
     },
     "@vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "3d01867c",
+      "fileHash": "cf1fd3f6",
       "needsInterop": false
     },
     "@vue/devtools-api": {
@@ -31,19 +31,25 @@
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "06b5d971",
+      "fileHash": "fd736f39",
       "needsInterop": false
     },
     "vue-router": {
       "src": "../../../../node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "file": "vue-router.js",
-      "fileHash": "b790e876",
+      "fileHash": "4eea8c66",
       "needsInterop": false
     },
     "three/examples/jsm/loaders/FontLoader.js": {
       "src": "../../../../node_modules/three/examples/jsm/loaders/FontLoader.js",
       "file": "three_examples_jsm_loaders_FontLoader__js.js",
-      "fileHash": "4e81c6e6",
+      "fileHash": "a968dbb3",
+      "needsInterop": false
+    },
+    "three/examples/jsm/controls/OrbitControls": {
+      "src": "../../../../node_modules/three/examples/jsm/controls/OrbitControls.js",
+      "file": "three_examples_jsm_controls_OrbitControls.js",
+      "fileHash": "d2f896a7",
       "needsInterop": false
     }
   },
