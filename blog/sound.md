@@ -11,3 +11,9 @@
   src="/Somethingscosmicv2.mp3"
   title="live @ hi-note"
 />
+
+## <GlitchText> some things cosmic v2 </GlitchText>
+<VidStack
+  src="/almetto-001.mp3"
+  title="#1"
+/>
