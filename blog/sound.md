@@ -12,7 +12,7 @@
   title="live @ hi-note"
 />
 
-## <GlitchText> some things cosmic v2 </GlitchText>
+## <GlitchText> Palmetto Session 7.27.2025 </GlitchText>
 <VidStack
   src="/almetto-001.mp3"
   title="#1"
